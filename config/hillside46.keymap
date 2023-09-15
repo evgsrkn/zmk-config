@@ -24,18 +24,31 @@
 
 / {
     macros {
-        ch_lng_lyr: ch_lng_lyr {
+        ch_lt: ch_lt {
+            label = "ch_lt";
             compatible = "zmk,behavior-macro";
-            label = "CH_LNG_LYR";
             #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings = 
+                <&macro_press &tog 1 &kp LSHIFT>,
+                <&macro_tap &kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_release &tog 1 &kp LSHIFT>;
+        };
+        ch_lg: ch_lg {
+            label = "ch_lg";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
-                <&tog 1 &kp LSHIFT>,
+                <&kp LSHIFT>,
                 <&macro_tap>,
                 <&kp LALT>,
-                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&tog 1 &kp LSHFT>;
+                <&kp LSHIFT>;
         };
     };
 };
