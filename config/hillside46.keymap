@@ -65,7 +65,7 @@
             bindings = <&ch_lng_lt>;
             key-positions = <39 40>;
             layers = <1 0>;
-            timeout-ms = <200>;
+            timeout-ms = <500>;
         };
     };
 
